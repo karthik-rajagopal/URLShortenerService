@@ -1,5 +1,4 @@
-README.txt
-    Build uisng Spring Boot Actuator and Gradle.
+    #Build uisng Spring Boot Actuator and Gradle.
     a) Java 1.7+
     b) Gradle 2.2+ (To compile)
 
@@ -54,6 +53,5 @@ README.txt
    < Date: Mon, 12 Jan 2015 07:10:17 GMT
    < 
    * Connection #0 to host localhost left intact
-============================================================================
 
 Please see "SCALE" document for scalability issues.
