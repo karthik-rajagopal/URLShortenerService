@@ -1,0 +1,46 @@
+buildscript {
+    repositories {
+        mavenLocal()
+            maven { url "http://repo.spring.io/libs-snapshot" }
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.1.5.RELEASE'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+jar {
+    baseName = 'url-shortener-service'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenLocal()
+        maven { url 'http://repository.codehaus.org' }
+    maven { url 'http://repo.spring.io/milestone' }
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.springframework.boot:spring-boot-starter-web:1.1.5.RELEASE"
+        compile "org.springframework.boot:spring-boot-starter-redis:1.1.5.RELEASE"
+        compile 'com.google.guava:guava:18.0'
+        compile 'org.apache.commons:commons-lang3:3.3.2'
+        compile 'commons-validator:commons-validator:1.4.0'
+        compile 'org.apache.tomcat.embed:tomcat-embed-el:8.0.9'
+        compile "org.aspectj:aspectjrt:1.8.1"
+
+}
+
+tasks.withType(GroovyCompile) {
+    groovyOptions.optimizationOptions.indy = true
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.2'
+}
