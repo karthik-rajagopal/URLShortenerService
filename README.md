@@ -1,4 +1,4 @@
-    #Build uisng Spring Boot Actuator and Gradle.
+    Built using Spring Boot Actuator and Gradle.
     a) Java 1.7+
     b) Gradle 2.2+ (To compile)
 
