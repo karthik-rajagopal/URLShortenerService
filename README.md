@@ -56,14 +56,14 @@
    * Connection #0 to host localhost left intact
 
 #Algorithm
- Generate short URL
-a) Generate a unique Id;
-b) Encode this unique Id using base 64 (url) encoding;
-c) Store the unique id to url mapping in a cache and/or persistence layer.
+##Generate short URL
+* Generate a unique Id;
+* Encode this unique Id using base 64 (url) encoding;
+* Store the unique id to url mapping in a cache and/or persistence layer.
 
- Generate full URL based on short URL
-a) Decode short url using base64 encoding;
-b) Fetch the id and lookup the (distributed) cache.
+##Generate full URL based on short URL
+* Decode short url using base64 encoding;
+* Fetch the id and lookup the (distributed) cache.
 
 #Scalability Issues
 ##Assumptions:
