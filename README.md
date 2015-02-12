@@ -55,6 +55,16 @@
    < 
    * Connection #0 to host localhost left intact
 
+#Algorithm
+ Generate short URL
+a) Generate a unique Id;
+b) Encode this unique Id using base 64 (url) encoding;
+c) Store the unique id to url mapping in a cache and/or persistence layer.
+
+ Generate full URL based on short URL
+a) Decode short url using base64 encoding;
+b) Fetch the id and lookup the (distributed) cache.
+
 #Scalability Issues
 ##Assumptions:
 a) This is essentially a poor man's url shortener. There is a no disk-based data persistence; however, as I would imagine, we need this to be production ready.
